@@ -1,0 +1,36 @@
+.Home {
+    padding: 20px;
+}
+
+.Home a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Level cards */
+.Home .level_cards_container {
+    /* width: auto; */
+}
+
+.Home .level_card {
+    background-color: yellowgreen;
+    border-radius: 8px;
+    cursor: pointer;
+    padding: 15px 25px;
+    transition: 0.3s;
+}
+
+.Home .level_card p {
+    margin: 0;
+    color: white;
+}
+
+.Home .level_card h6 {
+    margin: 0;
+    margin: 10px 0px;
+    font-size: 24px;
+}
+
+.Home .level_cards_container:hover> :not(:hover) {
+    opacity: 0.75
+}

@@ -1,0 +1,15 @@
+.pointChip {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: grey;
+    margin: 0px 2px
+}
+
+.pointChip.correct {
+    background-color: green;
+}
+
+.pointChip.incorrect {
+    background-color: red;
+}

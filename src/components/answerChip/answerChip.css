@@ -1,0 +1,23 @@
+.answerChip {
+    border: 1px solid yellowgreen;
+    border-radius: 8px;
+    width: 400px;
+    text-align: center;
+    padding: 8px;
+    font-weight: bold;
+    transition: 0.4s;
+}
+
+.answerChip:hover {
+    background-color: yellowgreen;
+    color: white;
+    transition: 0.4s;
+}
+
+.answerChip.correctAnswer {
+    background-color: green;
+}
+
+.answerChip.wrongAnswer {
+    background-color: red;
+}

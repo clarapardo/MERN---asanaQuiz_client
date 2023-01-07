@@ -1,0 +1,81 @@
+.Game {
+    padding: 20px;
+    font-family: Ubuntu;
+}
+
+.Game .pointsContainer {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+}
+
+.Game .pointsContainer h2 {
+    text-align: end;
+    font-size: 17px;
+    margin-top: 10px;
+    color: rgb(185, 185, 185);
+    font-weight: lighter;
+}
+
+.Game .close_cta {
+    border: 1px solid #2D2347;
+    border-radius: 50%;
+    width: fit-content;
+    cursor: pointer;
+}
+
+.Game .close_cta>svg {
+    color: #2D2347;
+    padding: 5px 4px 1px 5px;
+    width: 18px;
+    height: 18px;
+}
+
+
+/* POPUP CLOSE */
+.close_popup h2 {
+    font-family: Ubuntu !important;
+    letter-spacing: normal;
+    font-weight: normal;
+    text-align: center;
+    padding-bottom: 0px;
+    font-size: 25px;
+}
+
+.close_popup p {
+    font-family: Ubuntu !important;
+    font-size: 17px;
+    text-align: center;
+    margin-bottom: 20px;
+    color: black
+}
+
+.close_popup .MuiPaper-root {
+    border-radius: 14px;
+    padding: 10px;
+}
+
+.close_popup .MuiDialogActions-root {
+    display: flex;
+    justify-content: center;
+}
+
+.close_popup .MuiDialogActions-root button {
+    background-color: grey;
+    margin: 0 10px;
+    color: black;
+    text-transform: lowercase;
+    border-radius: 20px;
+    padding: 8px 55px;
+    font-size: 18px;
+}
+
+.close_popup .MuiDialogActions-root button:first-child {
+    /* background: linear-gradient(195deg, #cfecd0, #ffc5ca); */
+    background-color: rgb(117, 94, 138);
+}
+
+.close_popup .MuiDialogActions-root button:last-child {
+    /* background: linear-gradient(145deg, #aea4e3, #d3ffe8); */
+    background-color: rgb(209, 186, 231);
+}

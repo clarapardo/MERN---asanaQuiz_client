@@ -2,6 +2,7 @@ import './question.css'
 import AnswerChip from '../answerChip/answerChip'
 import setService from '../../services/set.service'
 import { useEffect, useState } from 'react'
+import { Grid } from '@mui/material'
 
 
 const Question = ({ data, points }) => {
@@ -29,11 +30,20 @@ const Question = ({ data, points }) => {
     return (
 
         <div className="question">
-            <img src="https://xuanlanyoga.com/wp-content/uploads/2022/05/posturas-de-equilibrio-yoga.jpg" />
-            <h2>Name this asana:</h2>
-            {/* <h2>{data.nameEnglish}</h2> */}
 
-            {answers.map(elm => <AnswerChip key={elm} name={elm} correctAnswer={nameEnglish} points={points}></AnswerChip>)}
+            <Grid container spacing={2}>
+                <Grid item xs={12} sm={4} justifyContent="center" container direction="column" alignItems="center" s>
+                    <img src="https://xuanlanyoga.com/wp-content/uploads/2022/05/posturas-de-equilibrio-yoga.jpg" />
+                    <p>{nameEnglish}</p>
+                </Grid>
+                <Grid item xs={12} sm={8}>
+                    <h2>Name this asana:</h2>
+                    <Grid container spacing={2}>
+                        {answers.map(elm => <Grid item xs={12} sm={6}><AnswerChip key={elm} name={elm} correctAnswer={nameEnglish} points={points} id={id}></AnswerChip></Grid>)}
+                    </Grid>
+                </Grid>
+
+            </Grid>
 
 
         </div>

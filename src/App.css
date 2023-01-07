@@ -3,7 +3,7 @@
   pointer-events: none;
 }
 
-.App a {
+a {
   text-decoration: none;
   color: inherit
 }

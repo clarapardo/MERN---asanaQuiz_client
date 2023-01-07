@@ -2,14 +2,14 @@
     width: 10px;
     height: 10px;
     border-radius: 50%;
-    background-color: grey;
+    background-color: rgb(185, 185, 185);
     margin: 0px 2px
 }
 
 .pointChip.correct {
-    background-color: green;
+    background-color: #b8ea2a;
 }
 
 .pointChip.incorrect {
-    background-color: red;
+    background-color: #ff960d;
 }

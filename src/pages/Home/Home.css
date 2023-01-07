@@ -7,30 +7,76 @@
     color: inherit;
 }
 
+.Home>h1 {
+    font-size: 40px;
+    font-family: Ubuntu;
+    font-weight: bold;
+    margin-bottom: 0;
+    /* color: #1E2D2F; */
+    color: #2D2347
+}
+
+.Home>h3 {
+    font-family: Ubuntu;
+    font-weight: normal;
+    margin-top: 10px;
+}
+
 /* Level cards */
 .Home .level_cards_container {
-    /* width: auto; */
+    margin-top: 75px;
 }
 
 .Home .level_card {
-    background-color: yellowgreen;
-    border-radius: 8px;
+    border-radius: 30px;
     cursor: pointer;
-    padding: 15px 25px;
+    padding: 25px;
     transition: 0.3s;
+    font-family: Ubuntu;
+}
+
+.Home .level_card.c1 {
+    background-image: url('https://products.ls.graphics/mesh-gradients/images/28.-Deco.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.Home .level_card.c2 {
+    background-image: url('https://products.ls.graphics/mesh-gradients/images/31.-Portage.jpg');
+    background-size: cover;
+    background-position: bottom;
+}
+
+.Home .level_card.c3 {
+    background-image: url('https://products.ls.graphics/mesh-gradients/images/26.-Honeysuckle_1.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.Home .level_card .icon {
+    color: #2D2347;
+    border: 2px solid #2D2347;
+    border-radius: 4px;
+    padding: 2px;
+    width: 17px;
+    height: 17px;
 }
 
 .Home .level_card p {
-    margin: 0;
-    color: white;
+    margin: 10px 0px 0px;
+    color: #2D2347;
+    font-size: 20px;
+    font-weight: lighter;
 }
 
 .Home .level_card h6 {
-    margin: 0;
-    margin: 10px 0px;
-    font-size: 24px;
+    margin: 10px 0px 0px;
+    font-size: 28px;
+    color: #2D2347;
+    /* font-weight: normal; */
 }
 
 .Home .level_cards_container:hover> :not(:hover) {
-    opacity: 0.75
+    filter: grayscale(0.75);
+    opacity: 0.45;
 }

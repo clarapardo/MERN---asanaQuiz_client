@@ -72,7 +72,7 @@
 
 .close_popup .MuiDialogActions-root button:first-child {
     /* background: linear-gradient(195deg, #cfecd0, #ffc5ca); */
-    background-color: rgb(117, 94, 138);
+    background-color: rgb(167 138 192);
 }
 
 .close_popup .MuiDialogActions-root button:last-child {

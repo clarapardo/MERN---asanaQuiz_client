@@ -1,0 +1,54 @@
+.IntroRetry {
+    padding: 20px;
+}
+
+.IntroRetry h1 {
+    font-size: 33px;
+    margin-top: 40px;
+    color: #2D2347
+}
+
+.IntroRetry .start_cta {
+    width: fit-content;
+    border-radius: 50%;
+    background-color: rgb(117, 94, 138);
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+
+    position: absolute;
+    top: 65%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.IntroRetry .start_cta>svg {
+    color: white;
+    width: 30px;
+    height: 30px;
+    margin: 18px 16px 20px 20px;
+}
+
+.IntroRetry .close_cta {
+    border: 1px solid #2D2347;
+    border-radius: 50%;
+    width: fit-content;
+    cursor: pointer;
+}
+
+.IntroRetry .close_cta>svg {
+    color: #2D2347;
+    padding: 5px 4px 1px 5px;
+    width: 18px;
+    height: 18px;
+}
+
+.IntroRetry .disclaimer {
+    position: absolute;
+    bottom: 20px;
+    /* padding-right: 20px; */
+    text-align: center;
+    width: 90%;
+}

@@ -1,5 +1,6 @@
 .Home {
     padding: 20px;
+    height: 100vh;
 }
 
 .Home a {
@@ -79,4 +80,16 @@
 .Home .level_cards_container:hover> :not(:hover) {
     filter: grayscale(0.75);
     opacity: 0.45;
+}
+
+.Home .retryCta {
+    text-align: center;
+    border: 2px solid #bdbdbd;
+    border-radius: 25px;
+    padding: 10px;
+    color: gray;
+    font-family: Ubuntu;
+    /* font-weight: bold; */
+    cursor: pointer;
+    margin-top: 50px;
 }

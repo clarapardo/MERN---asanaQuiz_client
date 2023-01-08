@@ -2,6 +2,8 @@ import { Routes, Route } from "react-router-dom"
 import HomePage from "../pages/Home/Home"
 import Intro from "../pages/Intro/Intro"
 import Game from "../pages/Game/Game"
+import IntroRetry from "../pages/IntroRetry/IntroRetry"
+import GameRetry from "../pages/GameRetry/GameRetry"
 
 
 const AppRoutes = () => {
@@ -11,7 +13,8 @@ const AppRoutes = () => {
             <Route path='/' element={<HomePage />} />
             <Route path='/start' element={<Intro />} />
             <Route path='/playing/:level' element={<Game />} />
-            <Route path='/replaying' element={<IntroRetry />} />
+            <Route path='/restart' element={<IntroRetry />} />
+            <Route path='/replaying' element={<GameRetry />} />
 
         </Routes>
     )

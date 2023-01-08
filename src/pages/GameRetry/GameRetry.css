@@ -1,0 +1,22 @@
+.Game .pointsBubble {
+    padding: 8px;
+    border-radius: 50%;
+    background-color: rgb(180 140 216 / 30%);
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.Game .pointsBubble div {
+    border-radius: 50%;
+    background-color: rgb(199 180 216);
+    font-family: Ubuntu;
+    height: 30px;
+    width: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

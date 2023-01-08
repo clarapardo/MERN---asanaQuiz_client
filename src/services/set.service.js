@@ -6,7 +6,10 @@ class SetService {
         this.app = axios.create({
             baseURL: `${process.env.REACT_APP_API_URL}`
         })
+    }
 
+    getCompleteAsana = (id) => {
+        return this.app.get(`/searchAsana/${id}`)
     }
 
     generateSet = (level) => {
@@ -16,7 +19,6 @@ class SetService {
     getRandomNames = (id) => {
         return this.app.get(`/randomNames/${id}`)
     }
-
 }
 
 const setService = new SetService()

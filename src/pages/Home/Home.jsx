@@ -4,12 +4,11 @@ import { Link, Navigate, useNavigate } from 'react-router-dom'
 import CheckIcon from '@mui/icons-material/Check'
 import PlayArrowIcon from '@mui/icons-material/PlayArrow'
 import LockIcon from '@mui/icons-material/Lock'
-import { addToCookie, deleteFromCookie, getCookie } from '../../utils/cookies'
+import { addToCookie, deleteFromCookie, getCookie, getCookieValues } from '../../utils/cookies'
 
 
 const HomePage = () => {
 
-    console.log('------', getCookie())
     return (
         <section className='Home'>
             <h1>Asana quiz</h1>
@@ -46,13 +45,13 @@ const HomePage = () => {
                 </Grid>
             </Grid>
 
-            {getCookie() !== ""
+            {!!getCookie()
                 ?
-                <Link to="/replaying">
-                    <div>Retry the incorrect ones</div>
+                <Link to="/restart">
+                    <div className='retryCta'>Retry failed ones - {getCookieValues().length}</div>
                 </Link>
                 :
-                <div>No wrong ones yet</div>
+                null
             }
 
         </section>

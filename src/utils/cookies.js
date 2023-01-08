@@ -6,7 +6,8 @@ const addToCookie = (value) => {
 
     if (!!getCookie()) {
         let cookieValue = getCookieValues()
-        cookieValue = getCookieValues().push(value)
+        cookieValue.push(value)
+        value = cookieValue
     }
 
     document.cookie = "asanaQuiz_wrong=" + (value || "") + expires + "; path=/"
@@ -22,7 +23,7 @@ const deleteFromCookie = (value) => {
         let index = cookieValue.indexOf(value)
         cookieValue.splice(index, 1)
 
-        document.cookie = "asanaQuiz_wrong=" + (value || "") + expires + "; path=/"
+        document.cookie = "asanaQuiz_wrong=" + (cookieValue || "") + expires + "; path=/"
     }
 }
 
@@ -40,7 +41,7 @@ const getCookie = () => {
             return c.substring(name.length, c.length)
         }
     }
-    return ""
+    return
 }
 
 const deleteCookie = () => {
@@ -52,8 +53,9 @@ const getCookieValues = () => {
         let cookieValue = getCookie()
         return cookieValue.split(',')
     }
+    return
 }
 
 
 
-module.exports = { addToCookie, deleteFromCookie, getCookie }
+module.exports = { addToCookie, deleteFromCookie, getCookie, getCookieValues }

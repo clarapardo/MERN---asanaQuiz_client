@@ -1,22 +1,22 @@
-import './Game.css'
+import './GameRetry.css'
 import { Link, useParams } from 'react-router-dom'
 import { useEffect, useState } from 'react'
 import setService from '../../services/set.service'
+import CloseIcon from '@mui/icons-material/Close'
+import Button from '@mui/material/Button'
+import Dialog from '@mui/material/Dialog'
+import DialogActions from '@mui/material/DialogActions'
+import DialogContentText from '@mui/material/DialogContentText'
+import DialogTitle from '@mui/material/DialogTitle'
+import { getCookieValues } from '../../utils/cookies'
 import Question from '../../components/question/question'
 import PointsCounter from '../../components/pointsCounter/pointsCounter'
-import CloseIcon from '@mui/icons-material/Close'
-import Button from '@mui/material/Button';
-import Dialog from '@mui/material/Dialog';
-import DialogActions from '@mui/material/DialogActions';
-import DialogContent from '@mui/material/DialogContent';
-import DialogContentText from '@mui/material/DialogContentText';
-import DialogTitle from '@mui/material/DialogTitle';
 
 
 
-const Game = () => {
 
-    const { level } = useParams()
+const GameRetry = () => {
+
     const [set, setSet] = useState([])
     const [question, setQuestion] = useState({})
     const [points, setPoints] = useState([])
@@ -24,7 +24,21 @@ const Game = () => {
 
 
     useEffect(() => {
-        getSet()
+
+        let allQuestionsId = getCookieValues()
+        let allSet = []
+
+        allQuestionsId?.map(elmId => {
+            setService
+                .getCompleteAsana(elmId)
+                .then(({ data }) => {
+                    allSet.push(data)
+                    setQuestion(data)
+                })
+                .catch(err => console.log(err))
+        })
+
+        setSet(allSet)
     }, [])
 
     //* Cada vez que se conteste a una preguta:
@@ -40,16 +54,6 @@ const Game = () => {
         }
     }, [points])
 
-    const getSet = () => {
-
-        setService
-            .generateSet(level)
-            .then(({ data }) => {
-                setSet(data)
-                setQuestion(data[0])
-            })
-            .catch(err => console.log(err))
-    }
 
 
     return (
@@ -67,10 +71,8 @@ const Game = () => {
 
 
             <div className='close_cta' onClick={() => setOpen(true)}><CloseIcon></CloseIcon></div>
-
-            <div className="pointsContainer">
-                <PointsCounter points={points}></PointsCounter>
-                <h2>{points.length < 0 ? 0 : [...points].filter(elm => elm === true).length}/12</h2>
+            <div className='pointsBubble'>
+                <div>{points.filter((elm) => (elm === true)).length}</div>
             </div>
             <Question data={question} points={setPoints}></Question>
 
@@ -78,4 +80,4 @@ const Game = () => {
     )
 }
 
-export default Game
+export default GameRetry

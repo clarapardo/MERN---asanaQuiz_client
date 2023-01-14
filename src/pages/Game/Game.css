@@ -1,6 +1,12 @@
 .Game {
     padding: 20px;
     font-family: Ubuntu;
+    background-image: url(https://3dicons.co/footer-gradient.svg);
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-size: 1100px auto;
+    height: 100vh;
+    box-sizing: border-box;
 }
 
 .Game .pointsContainer {
@@ -11,10 +17,16 @@
 
 .Game .pointsContainer h2 {
     text-align: end;
-    font-size: 17px;
+    font-size: 16px;
     margin-top: 10px;
     color: rgb(185, 185, 185);
     font-weight: lighter;
+    color: #412d74;
+}
+
+.Game .pointsContainer h2 span {
+    font-size: 22px;
+    font-weight: bold;
 }
 
 .Game .close_cta {
@@ -29,6 +41,15 @@
     padding: 5px 4px 1px 5px;
     width: 18px;
     height: 18px;
+}
+
+.Game .close_cta:hover {
+    background-color: rgb(240, 240, 240);
+}
+
+.Game .close_cta:hover>svg {
+    transform: rotate(360deg);
+    transition: 0.2s;
 }
 
 
@@ -82,4 +103,16 @@
 .close_popup .MuiDialogActions-root button:last-child {
     /* background: linear-gradient(145deg, #aea4e3, #d3ffe8); */
     background-color: rgb(209, 186, 231);
+}
+
+@media (min-width: 768px) {
+    .Game {
+        padding: 50px 80px 50px 50px;
+    }
+
+    .Game .pointsContainer {
+        position: absolute;
+        right: 80px;
+        top: 50px;
+    }
 }

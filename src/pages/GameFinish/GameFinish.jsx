@@ -1,8 +1,11 @@
 import './GameFinish.css'
 import { Link } from 'react-router-dom'
-import CloseIcon from '@mui/icons-material/Close';
-import Pie from '../../components/porcentagePie/porcentagePie';
-import { useEffect } from 'react';
+import CloseIcon from '@mui/icons-material/Close'
+import Pie from '../../components/porcentagePie/porcentagePie'
+import { useEffect } from 'react'
+import { Grid } from '@mui/material' // Grid version 2
+
+
 
 const GameFinish = ({ points }) => {
 
@@ -17,24 +20,31 @@ const GameFinish = ({ points }) => {
 
     return (
         <div className="GameFinish">
-            <div className="hero">
-                <div className='icon'>🧿</div>
-                <div>
-                    <h4>{catchPhrase}</h4>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vel nisi sagittis.</p>
-                </div>
-            </div>
+            <Grid container spacing={2} className='gameFinish-elements' justifyContent="space-around" alignItems="center">
+                <Grid item xs={12} sm={6} md={4}>
+                    <div className="hero">
+                        <div className='icon'>🧿</div>
+                        <div>
+                            <h4>{catchPhrase}</h4>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vel nisi sagittis.</p>
+                        </div>
+                    </div>
+                </Grid>
 
-            <div className="numbers">
-                <div className='roundPorcentage'>
-                    <Pie percentage={porcentagePoints} colour="#382b58" className='pie'></Pie>
-                    <div className="core">{porcentagePoints}%</div>
-                </div>
-                <div>
-                    <p>Punctuation</p>
-                    <p><span>{pointsValue}</span>/{points.length}</p>
-                </div>
-            </div>
+                <Grid item xs={12} sm={6} md={4}>
+                    <div className="numbers">
+                        <div className='roundPorcentage'>
+                            <Pie percentage={porcentagePoints} colour="#382b58" className='pie'></Pie>
+                            <div className="core">{porcentagePoints}%</div>
+                        </div>
+                        <div>
+                            <p>Punctuation</p>
+                            <p><span>{pointsValue}</span>/{points.length}</p>
+                        </div>
+                    </div>
+                </Grid>
+
+            </Grid>
 
             <Link to='/'>
                 <div className='return_cta'>return to home</div>

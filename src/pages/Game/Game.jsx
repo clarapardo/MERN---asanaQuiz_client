@@ -5,12 +5,12 @@ import setService from '../../services/set.service'
 import Question from '../../components/question/question'
 import PointsCounter from '../../components/pointsCounter/pointsCounter'
 import CloseIcon from '@mui/icons-material/Close'
-import Button from '@mui/material/Button';
-import Dialog from '@mui/material/Dialog';
-import DialogActions from '@mui/material/DialogActions';
-import DialogContent from '@mui/material/DialogContent';
-import DialogContentText from '@mui/material/DialogContentText';
-import DialogTitle from '@mui/material/DialogTitle';
+import Button from '@mui/material/Button'
+import Dialog from '@mui/material/Dialog'
+import DialogActions from '@mui/material/DialogActions'
+import DialogContent from '@mui/material/DialogContent'
+import DialogContentText from '@mui/material/DialogContentText'
+import DialogTitle from '@mui/material/DialogTitle'
 import GameFinish from '../GameFinish/GameFinish'
 
 
@@ -26,7 +26,7 @@ const Game = () => {
 
     useEffect(() => {
         getSet()
-    }, [])
+    }, [level])
 
     //* Cada vez que se conteste a una preguta:
     useEffect(() => {
@@ -72,7 +72,7 @@ const Game = () => {
 
                     <div className="pointsContainer">
                         <PointsCounter points={points}></PointsCounter>
-                        <h2>{points.length < 0 ? 0 : [...points].filter(elm => elm === true).length}/12</h2>
+                        <h2><span>{points.length < 0 ? 0 : [...points].filter(elm => elm === true).length}</span>/12</h2>
                     </div>
                     <Question data={question} points={setPoints}></Question>
                 </>

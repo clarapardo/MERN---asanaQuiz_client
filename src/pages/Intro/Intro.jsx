@@ -11,16 +11,18 @@ const Intro = () => {
 
     const search = useLocation().search
     const level = new URLSearchParams(search).get('')
-    let copy;
+    let copy, explanation;
     if (level === '1') {
         copy = 'Yogui newbie'
+        explanation = 'A twelve set of the most common asanas will be displayed - the asanas that can be found in surya namaskar A, surya namaskar B, and some other basic sequencies.'
     } else if (level === '2') {
         copy = 'Intermedio'
+        explanation = 'You will play a set of twelve asanas of medium level - based on how commonly used are, and how difficult the sanskrit name is.'
     } else {
         copy = 'Next Dalai Lama'
+        explanation = 'A set of twelve asanas will be displayed. This asanas are more unique, more rarely used in classes, or have quite a bit more difficult name - but not necessarily means that they are advanced postures.'
     }
 
-    //? haría falta un btn de volver
     return (
         <div className="Intro">
 
@@ -31,7 +33,7 @@ const Intro = () => {
             <h6>level {level}</h6>
             <h1>{copy}</h1>
 
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris ut semper velit. Etiam ut rutrum nisl. Suspendisse nec porta velit. Suspendisse felis nisl, dapibus at odio nec, tincidunt vehicula ante</p>
+            <p class="someText">{explanation}</p>
 
             <Link to={`/playing/${level}`}>
                 <div className="start_cta"><ArrowForwardIosIcon></ArrowForwardIosIcon></div>

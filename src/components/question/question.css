@@ -6,9 +6,25 @@
     width: 300px;
     height: 300px;
     border-radius: 50%;
+    object-fit: cover;
+    filter: grayscale(1);
 }
 
 .question h2 {
     text-align: center;
     margin-bottom: 30px;
+    color: #412d74;
+}
+
+@media (min-width: 768px) {
+    .question img {
+        width: 25vw;
+        height: 25vw;
+        border-radius: 50%;
+        object-fit: cover;
+    }
+
+    .question h2 {
+        margin-bottom: 60px;
+    }
 }

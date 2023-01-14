@@ -12,6 +12,9 @@
     width: 25px;
     height: 25px;
     margin-right: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .GameFinish .hero h4 {
@@ -94,5 +97,24 @@
 }
 
 .GameFinish .return_cta:hover {
-    font-weight: bold;
+    background-color: white;
+}
+
+@media (min-width: 768px) {
+    .GameFinish {
+        background-image: url(https://3dicons.co/3d-gradient.svg);
+        background-position: top;
+        background-repeat: no-repeat;
+        background-size: 1100px auto;
+        height: 100vh;
+        margin-top: -50px
+    }
+
+    .GameFinish .numbers {
+        margin-top: 0px;
+    }
+
+    .gameFinish-elements {
+        padding-top: 17vh;
+    }
 }

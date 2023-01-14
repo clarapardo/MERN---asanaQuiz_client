@@ -1,0 +1,48 @@
+.Error {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+
+    background-image: url(https://3dicons.co/3d-gradient.svg), url(https://3dicons.co/footer-gradient.svg);
+    background-position: top, bottom;
+    background-repeat: no-repeat;
+    background-size: 1100px auto;
+
+    font-family: Ubuntu;
+}
+
+.Error h1 {
+    font-size: 70px;
+    margin-bottom: 0;
+    color: greenyellow
+}
+
+.Error h4 {
+    margin-top: 5px;
+    text-transform: uppercase;
+}
+
+.Error div {
+    margin-top: 5px;
+    background-color: rgb(132, 107, 155);
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    padding: 15px 40px;
+    border-radius: 20px;
+    color: white;
+    margin-top: 100px;
+}
+
+.Error div:hover {
+    background-color: rgb(166, 131, 199);
+}
+
+@media (min-width: 768px) {
+    .Error h1 {
+        font-size: 120px;
+        margin-bottom: 0;
+        color: greenyellow
+    }
+}

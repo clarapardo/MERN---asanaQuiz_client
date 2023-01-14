@@ -12,12 +12,11 @@
     font-family: Ubuntu;
     font-weight: bold;
     margin-bottom: 0;
-    /* color: #1E2D2F; */
-    color: #2D2347
+    color: #412d74;
 }
 
 .Home>h3 {
-    font-family: Ubuntu;
+    /* font-family: Ubuntu; */
     font-weight: normal;
     margin-top: 10px;
 }
@@ -33,24 +32,51 @@
     padding: 25px;
     transition: 0.3s;
     font-family: Ubuntu;
+    /* margin-top: 5px */
 }
 
 .Home .level_card.c1 {
     background-image: url('https://products.ls.graphics/mesh-gradients/images/28.-Deco.jpg');
     background-size: cover;
     background-position: center;
+    position: relative;
 }
 
 .Home .level_card.c2 {
     background-image: url('https://products.ls.graphics/mesh-gradients/images/31.-Portage.jpg');
     background-size: cover;
     background-position: bottom;
+    position: relative;
 }
 
 .Home .level_card.c3 {
     background-image: url('https://products.ls.graphics/mesh-gradients/images/26.-Honeysuckle_1.jpg');
     background-size: cover;
     background-position: center;
+    position: relative;
+}
+
+.Home .level_card .img {
+    width: 110px;
+    height: 110px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: absolute;
+    top: -20px;
+    right: 20px;
+}
+
+.Home .level_card.c1 .img {
+    background-image: url('https://res.cloudinary.com/clarapardo/image/upload/v1673697597/star_y45i9i.png');
+}
+
+.Home .level_card.c2 .img {
+    background-image: url('https://res.cloudinary.com/clarapardo/image/upload/v1673697508/fire_x44tic.png');
+}
+
+.Home .level_card.c3 .img {
+    background-image: url('https://res.cloudinary.com/clarapardo/image/upload/v1673697070/bombilla_htcas8.png');
 }
 
 .Home .level_card .icon {
@@ -71,13 +97,13 @@
 
 .Home .level_card h6 {
     margin: 10px 0px 0px;
-    font-size: 28px;
+    font-size: 21px;
     color: #2D2347;
     /* font-weight: normal; */
 }
 
 .Home .level_cards_container:hover> :not(:hover) {
-    filter: grayscale(0.75);
+    filter: grayscale(0.75) blur(2px);
     opacity: 0.45;
 }
 
@@ -91,4 +117,44 @@
     /* font-weight: bold; */
     cursor: pointer;
     margin-top: 50px;
+}
+
+.Home .retryCta:hover {
+    background-color: #e9e9e9;
+}
+
+@media(min-width: 768px) {
+    .Home {
+        padding-top: 70px;
+        /* text-align: center; */
+    }
+
+    .Home>h1 {
+        text-align: center;
+    }
+
+    .Home>h3 {
+        text-align: center;
+        margin-bottom: 70px;
+    }
+
+    .Home .retryCta {
+        max-width: 350px;
+        margin: 100px auto;
+    }
+
+    .Home .level_card .img {
+        width: 150px;
+        height: 150px;
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        position: absolute;
+        top: -60px;
+        right: 20px;
+    }
+
+    .Home .level_card h6 {
+        font-size: 28px;
+    }
 }

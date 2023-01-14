@@ -78,7 +78,14 @@ const GameRetry = () => {
 
                 </>
                 :
-                <GameFinish points={points}></GameFinish>
+                <>
+                    {set.length !== 0
+                        ?
+                        <GameFinish points={points}></GameFinish>
+                        :
+                        null
+                    }
+                </>
             }
         </div>
     )

@@ -1,5 +1,6 @@
 .answerChip {
-    border: 1px solid gray;
+    border: 1px solid #2D2347;
+    background-color: white;
     border-radius: 8px;
     /* width: 400px; */
     text-align: center;
@@ -10,8 +11,9 @@
 }
 
 .answerChip:hover {
-    background-color: grey;
-    color: white;
+    /* background-color: rgb(224, 224, 224); */
+    background-color: #cbb9ff;
+    /* color: white; */
     transition: 0.4s;
 }
 
@@ -22,7 +24,14 @@
 }
 
 .answerChip.wrongAnswer {
-    background-color: #ff960d;
-    border-color: #ff960d;
+    background-color: #ff8b89;
+    border-color: #ff807e;
     color: black;
+}
+
+@media (min-width: 768px) {
+    .answerChip {
+        width: 50%;
+        margin: auto;
+    }
 }

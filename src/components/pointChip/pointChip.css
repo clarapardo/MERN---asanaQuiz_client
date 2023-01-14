@@ -2,14 +2,22 @@
     width: 10px;
     height: 10px;
     border-radius: 50%;
-    background-color: rgb(185, 185, 185);
+    background-color: rgb(214, 214, 214);
     margin: 0px 2px
 }
 
 .pointChip.correct {
     background-color: #b8ea2a;
+    animation: zoom-in-zoom-out 1s ease-out;
+    animation-iteration-count: 1;
 }
 
 .pointChip.incorrect {
-    background-color: #ff960d;
+    background-color: #ff8b89;
+}
+
+@keyframes zoom-in-zoom-out {
+    0% {
+        transform: scale(4);
+    }
 }

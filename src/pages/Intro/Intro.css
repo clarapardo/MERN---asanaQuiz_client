@@ -3,11 +3,11 @@
     font-family: Ubuntu;
     height: -webkit-fill-available;
 
+    /* background-image: url('https://res.cloudinary.com/clarapardo/image/upload/v1673201062/F2_eoczzb.png'); */
+    background-image: url(https://3dicons.co/3d-gradient.svg), url(https://3dicons.co/footer-gradient.svg);
+    background-position: top, bottom;
     background-repeat: no-repeat;
-    background-position: bottom;
-    /* background-image: url(https://w0.peakpx.com/wallpaper/285/606/HD-wallpaper-rainbow-pastel-purple-gradient-light-led-pink-simple-solid-mix-gray.jpg); */
-    background-size: 100vw 58vh;
-    background-image: url('https://res.cloudinary.com/clarapardo/image/upload/v1673201062/F2_eoczzb.png');
+    background-size: 1100px auto;
 }
 
 
@@ -20,13 +20,17 @@
 .Intro h1 {
     font-size: 33px;
     margin-top: 10px;
-    color: #2D2347
+    color: #412d74
+}
+
+.Intro .someText {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
 .Intro .start_cta {
     width: fit-content;
     border-radius: 50%;
-    background-color: rgb(117, 94, 138);
+    background-color: rgb(132, 107, 155);
     box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
     display: flex;
     justify-content: center;
@@ -39,6 +43,10 @@
     transform: translateX(-50%);
 }
 
+.Intro .start_cta:hover {
+    background-color: rgb(166, 131, 199);
+}
+
 .Intro .start_cta>svg {
     color: white;
     width: 30px;
@@ -47,10 +55,19 @@
 }
 
 .Intro .close_cta {
-    border: 1px solid #2D2347;
+    border: 1px solid #412d74;
     border-radius: 50%;
     width: fit-content;
     cursor: pointer;
+}
+
+.Intro .close_cta:hover {
+  background-color: rgb(240, 240, 240);
+}
+
+.Intro .close_cta:hover>svg {
+    transform: rotate(360deg);
+    transition: 0.2s;
 }
 
 .Intro .close_cta>svg {
@@ -66,4 +83,35 @@
     /* padding-right: 20px; */
     text-align: center;
     width: 90%;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+@media (min-width: 768px) {
+
+    .Intro {
+        padding: 50px;
+    }
+
+    .Intro h6 {
+        text-align: center;
+    }
+
+    .Intro h1 {
+        text-align: center;
+    }
+
+    .Intro .someText {
+        max-width: 500px;
+        line-height: 2;
+        margin: auto;
+    }
+
+    .Intro .disclaimer {
+        width: 30%;
+        text-align: center;
+        right: 50%;
+        transform: translateX(50%);
+        font-size: 15px;
+        color: rgb(82, 82, 82)
+    }
 }

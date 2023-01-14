@@ -1,10 +1,10 @@
 import './Home.css'
-import { Grid } from '@mui/material'; // Grid version 2
-import { Link, Navigate, useNavigate } from 'react-router-dom'
-import CheckIcon from '@mui/icons-material/Check'
-import PlayArrowIcon from '@mui/icons-material/PlayArrow'
-import LockIcon from '@mui/icons-material/Lock'
-import { addToCookie, deleteFromCookie, getCookie, getCookieValues } from '../../utils/cookies'
+import { Grid } from '@mui/material' // Grid version 2
+import { Link } from 'react-router-dom'
+import AllInclusiveIcon from '@mui/icons-material/AllInclusive'
+import AutoAwesomeIcon from '@mui/icons-material/AutoAwesome'
+import GraphicEqIcon from '@mui/icons-material/GraphicEq'
+import { getCookie, getCookieValues } from '../../utils/cookies'
 
 
 const HomePage = () => {
@@ -18,9 +18,10 @@ const HomePage = () => {
                 <Grid item xs={12} sm={6} md={4}>
                     <Link to='/start?=1'>
                         <article className='level_card c1'>
-                            <CheckIcon className='icon'></CheckIcon>
+                            <GraphicEqIcon className='icon'></GraphicEqIcon>
                             <p>level 1</p>
                             <h6>Yogui newbie</h6>
+                            <div class="img"></div>
                         </article>
                     </Link>
                 </Grid>
@@ -28,18 +29,21 @@ const HomePage = () => {
                     <Link to='/start?=2'>
 
                         <article className='level_card c2'>
-                            <PlayArrowIcon className='icon'></PlayArrowIcon>
+                            <AutoAwesomeIcon className='icon'></AutoAwesomeIcon>
                             <p>level 2</p>
-                            <h6>Intermedio</h6>
+                            <h6>Somebody said yoga retreat?</h6>
+                            <div class="img"></div>
                         </article>
                     </Link>
                 </Grid>
-                <Grid item xs={12} sm={12} md={4} center>
+                <Grid item xs={12} sm={12} md={4}>
                     <Link to='/start?=3'>
                         <article className='level_card c3'>
-                            <LockIcon className='icon'></LockIcon>
+                            <AllInclusiveIcon className='icon'></AllInclusiveIcon>
                             <p>level 3</p>
-                            <h6>Next Dalai Lama</h6>
+                            <h6>Close to ilumination</h6>
+                            {/* <h6>Next Dalai Lama</h6> */}
+                            <div class="img"></div>
                         </article>
                     </Link>
                 </Grid>

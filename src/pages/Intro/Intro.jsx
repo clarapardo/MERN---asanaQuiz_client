@@ -33,7 +33,7 @@ const Intro = () => {
             <h6>level {level}</h6>
             <h1>{copy}</h1>
 
-            <p class="someText">{explanation}</p>
+            <p className="someText">{explanation}</p>
 
             <Link to={`/playing/${level}`}>
                 <div className="start_cta"><ArrowForwardIosIcon></ArrowForwardIosIcon></div>

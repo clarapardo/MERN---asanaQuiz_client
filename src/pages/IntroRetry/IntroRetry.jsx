@@ -14,7 +14,7 @@ const IntroRetry = () => {
             </Link>
 
             <h1>Retry the failed ones</h1>
-            <p class="someText">Here you will find the collection of all the failed asanas played. You have the chance of review them and try again. There is no limit - the number you of asanas that you failed is the number of asanas you'll play now.</p>
+            <p className="someText">Here you will find the collection of all the failed asanas played. You have the chance of review them and try again. There is no limit - the number you of asanas that you failed is the number of asanas you'll play now.</p>
 
             <Link to={'/replaying'}>
                 <div className="start_cta"><ArrowForwardIosIcon></ArrowForwardIosIcon></div>

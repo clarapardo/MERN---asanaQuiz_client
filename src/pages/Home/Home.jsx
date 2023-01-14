@@ -21,7 +21,7 @@ const HomePage = () => {
                             <GraphicEqIcon className='icon'></GraphicEqIcon>
                             <p>level 1</p>
                             <h6>Yogui newbie</h6>
-                            <div class="img"></div>
+                            <div className="img"></div>
                         </article>
                     </Link>
                 </Grid>
@@ -32,7 +32,7 @@ const HomePage = () => {
                             <AutoAwesomeIcon className='icon'></AutoAwesomeIcon>
                             <p>level 2</p>
                             <h6>Somebody said yoga retreat?</h6>
-                            <div class="img"></div>
+                            <div className="img"></div>
                         </article>
                     </Link>
                 </Grid>
@@ -43,7 +43,7 @@ const HomePage = () => {
                             <p>level 3</p>
                             <h6>Close to ilumination</h6>
                             {/* <h6>Next Dalai Lama</h6> */}
-                            <div class="img"></div>
+                            <div className="img"></div>
                         </article>
                     </Link>
                 </Grid>

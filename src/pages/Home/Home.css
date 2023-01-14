@@ -1,5 +1,7 @@
 .Home {
     padding: 20px;
+    min-height: 100%;
+    box-sizing: border-box;
 }
 
 .Home a {
@@ -102,11 +104,6 @@
     /* font-weight: normal; */
 }
 
-.Home .level_cards_container:hover> :not(:hover) {
-    filter: grayscale(0.75) blur(2px);
-    opacity: 0.45;
-}
-
 .Home .retryCta {
     text-align: center;
     border: 2px solid #bdbdbd;
@@ -117,6 +114,7 @@
     /* font-weight: bold; */
     cursor: pointer;
     margin-top: 50px;
+    margin-bottom: 25px;
 }
 
 .Home .retryCta:hover {
@@ -127,6 +125,11 @@
     .Home {
         padding-top: 70px;
         /* text-align: center; */
+    }
+
+    .Home .level_cards_container:hover> :not(:hover) {
+        filter: grayscale(0.75) blur(2px);
+        opacity: 0.45;
     }
 
     .Home>h1 {

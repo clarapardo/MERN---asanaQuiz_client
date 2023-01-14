@@ -3,6 +3,8 @@
     border-radius: 30px;
     padding: 20px;
     display: flex;
+    min-height: 100%;
+    box-sizing: border-box;
 }
 
 .GameFinish .hero .icon {
@@ -106,7 +108,7 @@
         background-position: top;
         background-repeat: no-repeat;
         background-size: 1100px auto;
-        height: 100vh;
+        height: 100%;
         margin-top: -50px
     }
 

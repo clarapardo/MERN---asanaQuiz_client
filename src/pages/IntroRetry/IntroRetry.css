@@ -1,7 +1,8 @@
 .IntroRetry {
     padding: 20px;
     font-family: Ubuntu;
-    height: -webkit-fill-available;
+    min-height: 100%;
+    box-sizing: border-box;
 
     background-image: url(https://3dicons.co/3d-gradient.svg), url(https://3dicons.co/footer-gradient.svg);
     background-position: top, bottom;

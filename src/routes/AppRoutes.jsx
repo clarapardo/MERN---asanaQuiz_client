@@ -4,6 +4,8 @@ import Intro from "../pages/Intro/Intro"
 import Game from "../pages/Game/Game"
 import IntroRetry from "../pages/IntroRetry/IntroRetry"
 import GameRetry from "../pages/GameRetry/GameRetry"
+import { getCookie } from "../utils/cookies"
+
 
 
 const AppRoutes = () => {
@@ -13,9 +15,8 @@ const AppRoutes = () => {
             <Route path='/' element={<HomePage />} />
             <Route path='/start' element={<Intro />} />
             <Route path='/playing/:level' element={<Game />} />
-            <Route path='/restart' element={<IntroRetry />} />
-            <Route path='/replaying' element={<GameRetry />} />
-
+            <Route path='/restart' element={!!getCookie() ? <IntroRetry /> : <HomePage />} />
+            <Route path='/replaying' element={!!getCookie() ? <GameRetry /> : <HomePage />} />
         </Routes>
     )
 }

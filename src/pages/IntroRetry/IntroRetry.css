@@ -1,5 +1,14 @@
 .IntroRetry {
     padding: 20px;
+
+    font-family: Ubuntu;
+    height: -webkit-fill-available;
+
+    background-repeat: no-repeat;
+    background-position: bottom;
+    /* background-image: url(https://w0.peakpx.com/wallpaper/285/606/HD-wallpaper-rainbow-pastel-purple-gradient-light-led-pink-simple-solid-mix-gray.jpg); */
+    background-size: 100vw 58vh;
+    background-image: url('https://res.cloudinary.com/clarapardo/image/upload/v1673201062/F2_eoczzb.png');
 }
 
 .IntroRetry h1 {
@@ -47,7 +56,7 @@
 
 .IntroRetry .disclaimer {
     position: absolute;
-    bottom: 20px;
+    bottom: 35px;
     /* padding-right: 20px; */
     text-align: center;
     width: 90%;

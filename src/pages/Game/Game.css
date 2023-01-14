@@ -60,14 +60,18 @@
     justify-content: center;
 }
 
+.close_popup .MuiDialogActions-root>button,
+.close_popup .MuiDialogActions-root>a {
+    margin: 0 10px
+}
+
 .close_popup .MuiDialogActions-root button {
-    background-color: grey;
-    margin: 0 10px;
     color: black;
     text-transform: lowercase;
     border-radius: 20px;
-    padding: 8px 55px;
+    padding: 8px 0px;
     font-size: 18px;
+    min-width: 130px;
 }
 
 .close_popup .MuiDialogActions-root button:first-child {

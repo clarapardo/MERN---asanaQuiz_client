@@ -19,7 +19,7 @@ const Question = ({ data, points }) => {
             .getRandomNames(id)
             .then(({ data: names }) => {
 
-                names.push(nameEnglish)
+                names.push(nameSanskrit)
                 const unorderedNames = names.sort((a, b) => 0.5 - Math.random())
                 setAnswers(unorderedNames)
             })
@@ -33,13 +33,13 @@ const Question = ({ data, points }) => {
 
             <Grid container spacing={2}>
                 <Grid item xs={12} sm={4} justifyContent="center" container direction="column" alignItems="center" s>
-                    <img src="https://xuanlanyoga.com/wp-content/uploads/2022/05/posturas-de-equilibrio-yoga.jpg" />
+                    <img src={imageUrl} />
                     <p>{nameEnglish}</p>
                 </Grid>
                 <Grid item xs={12} sm={8}>
                     <h2>Name this asana:</h2>
                     <Grid container spacing={2}>
-                        {answers.map(elm => <Grid item xs={12} sm={6}><AnswerChip key={elm} name={elm} correctAnswer={nameEnglish} points={points} id={id}></AnswerChip></Grid>)}
+                        {answers.map(elm => <Grid item xs={12} sm={6}><AnswerChip key={elm} name={elm} correctAnswer={nameSanskrit} points={points} id={id}></AnswerChip></Grid>)}
                     </Grid>
                 </Grid>
 

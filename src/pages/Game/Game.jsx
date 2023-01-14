@@ -11,6 +11,7 @@ import DialogActions from '@mui/material/DialogActions';
 import DialogContent from '@mui/material/DialogContent';
 import DialogContentText from '@mui/material/DialogContentText';
 import DialogTitle from '@mui/material/DialogTitle';
+import GameFinish from '../GameFinish/GameFinish'
 
 
 
@@ -29,14 +30,12 @@ const Game = () => {
 
     //* Cada vez que se conteste a una preguta:
     useEffect(() => {
-        if (points.length !== 0) {
+        if (points.length !== 0 && points.length < 12) {
 
             setQuestion(set[points.length]);
             document.querySelector('.answerChip.wrongAnswer')?.classList.remove('wrongAnswer')
             document.querySelector('.answerChip.correctAnswer')?.classList.remove('correctAnswer')
 
-        } else if (points.length === 12) {
-            console.log('HAS ACABADO EL JUEGO!')
         }
     }, [points])
 
@@ -54,26 +53,32 @@ const Game = () => {
 
     return (
         <div className='Game'>
-            <Dialog open={open} className='close_popup'>
-                <DialogTitle id="alert-dialog-title">Are you sure?</DialogTitle>
-                <DialogContentText>Do you want to exit?</DialogContentText>
-                <DialogActions>
-                    <Button onClick={() => setOpen(false)}>no</Button>
-                    <Link to='/'>
-                        <Button>yes</Button>
-                    </Link>
-                </DialogActions>
-            </Dialog>
+            {points.length < 12
+                ?
+                <>
+                    <Dialog open={open} className='close_popup'>
+                        <DialogTitle id="alert-dialog-title">Are you sure?</DialogTitle>
+                        <DialogContentText>Do you want to exit?</DialogContentText>
+                        <DialogActions>
+                            <Button onClick={() => setOpen(false)}>no</Button>
+                            <Link to='/'>
+                                <Button>yes</Button>
+                            </Link>
+                        </DialogActions>
+                    </Dialog>
 
 
-            <div className='close_cta' onClick={() => setOpen(true)}><CloseIcon></CloseIcon></div>
+                    <div className='close_cta' onClick={() => setOpen(true)}><CloseIcon></CloseIcon></div>
 
-            <div className="pointsContainer">
-                <PointsCounter points={points}></PointsCounter>
-                <h2>{points.length < 0 ? 0 : [...points].filter(elm => elm === true).length}/12</h2>
-            </div>
-            <Question data={question} points={setPoints}></Question>
-
+                    <div className="pointsContainer">
+                        <PointsCounter points={points}></PointsCounter>
+                        <h2>{points.length < 0 ? 0 : [...points].filter(elm => elm === true).length}/12</h2>
+                    </div>
+                    <Question data={question} points={setPoints}></Question>
+                </>
+                :
+                <GameFinish points={points}></GameFinish>
+            }
         </div>
     )
 }

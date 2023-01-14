@@ -1,0 +1,16 @@
+.footer {
+    padding-bottom: 20px;
+    font-family: Ubuntu;
+    font-size: 14px;
+    color: gray;
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0.7;
+}
+
+.footer div {
+    width: fit-content;
+    margin: auto;
+}

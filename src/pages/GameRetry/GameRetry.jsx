@@ -11,7 +11,7 @@ import DialogTitle from '@mui/material/DialogTitle'
 import { getCookieValues } from '../../utils/cookies'
 import Question from '../../components/question/question'
 import PointsCounter from '../../components/pointsCounter/pointsCounter'
-
+import GameFinish from '../GameFinish/GameFinish'
 
 
 
@@ -49,8 +49,6 @@ const GameRetry = () => {
             document.querySelector('.answerChip.wrongAnswer')?.classList.remove('wrongAnswer')
             document.querySelector('.answerChip.correctAnswer')?.classList.remove('correctAnswer')
 
-        } else if (points.length === 12) {
-            console.log('HAS ACABADO EL JUEGO!')
         }
     }, [points])
 
@@ -58,24 +56,30 @@ const GameRetry = () => {
 
     return (
         <div className='Game'>
-            <Dialog open={open} className='close_popup'>
-                <DialogTitle id="alert-dialog-title">Are you sure?</DialogTitle>
-                <DialogContentText>Do you want to exit?</DialogContentText>
-                <DialogActions>
-                    <Button onClick={() => setOpen(false)}>no</Button>
-                    <Link to='/'>
-                        <Button>yes</Button>
-                    </Link>
-                </DialogActions>
-            </Dialog>
+            {points.length < set.length ?
+                <>
+                    <Dialog open={open} className='close_popup'>
+                        <DialogTitle id="alert-dialog-title">Are you sure?</DialogTitle>
+                        <DialogContentText>Do you want to exit?</DialogContentText>
+                        <DialogActions>
+                            <Button onClick={() => setOpen(false)}>no</Button>
+                            <Link to='/'>
+                                <Button>yes</Button>
+                            </Link>
+                        </DialogActions>
+                    </Dialog>
 
 
-            <div className='close_cta' onClick={() => setOpen(true)}><CloseIcon></CloseIcon></div>
-            <div className='pointsBubble'>
-                <div>{points.filter((elm) => (elm === true)).length}</div>
-            </div>
-            <Question data={question} points={setPoints}></Question>
+                    <div className='close_cta' onClick={() => setOpen(true)}><CloseIcon></CloseIcon></div>
+                    <div className='pointsBubble'>
+                        <div>{points.filter((elm) => (elm === true)).length}</div>
+                    </div>
+                    <Question data={question} points={setPoints}></Question>
 
+                </>
+                :
+                <GameFinish points={points}></GameFinish>
+            }
         </div>
     )
 }

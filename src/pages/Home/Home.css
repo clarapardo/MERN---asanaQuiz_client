@@ -1,6 +1,5 @@
 .Home {
     padding: 20px;
-    height: 100vh;
 }
 
 .Home a {
@@ -25,7 +24,7 @@
 
 /* Level cards */
 .Home .level_cards_container {
-    margin-top: 75px;
+    margin-top: 28px;
 }
 
 .Home .level_card {

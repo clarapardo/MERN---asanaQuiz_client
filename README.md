@@ -12,7 +12,7 @@ There are 3 different levels of difficulty. On each try, you'll be tested on twe
 
 <div style="display: flex; justify-content: center; align-items: center">
     <img src="/public/5.png" alt="this.project.home" style="width: 23%; margin-right: 5px"/>
-    <img src="/public/7.png" alt="this.project.question" style="width: 23%; margin-right: 5px"/>
+    <img src="/public/1.png" alt="this.project.question" style="width: 23%; margin-right: 5px"/>
     <img src="/public/6.png" alt="this.project.question" style="width: 23%; margin-right: 5px"/>
     <img src="/public/3.png" alt="this.project.home" style="width: 23%; margin-top: 25px"/>
 </div>
@@ -31,10 +31,12 @@ The *frameworks*, *libraries*, and other tools used:
 
 <h3>Back-end endpoints and expected data</h3>
 
-<h4>**/api/addAsana**</h4>
+<h4>/api/addAsana</h4>
+
 description: add a yoga posture to the collection  
 method: POST  
 input: 
+
 ```
 body: {
     nameEnglish: string,
@@ -43,21 +45,29 @@ body: {
     imageUrl: string
 }
 ```
+
 output: 
+
 ```
 status: 200,
 body: {"created"}
 ```
+
 <br>
 
-<h4>**/api/searchAsana/:id**</h4>
+<h4>/api/searchAsana/:id</h4>
+
 description: get a certain yoga pose based on id  
 method: GET  
+
 input: 
+
 ```
 params:  id
 ```
+
 output: 
+
 ```
 status: 200,
 body: {
@@ -72,14 +82,18 @@ body: {
 ```
 <br>
 
-<h4>**/api/randomSet/:level**</h4>
+<h4>/api/randomSet/:level</h4>
+
 description: generate a **random ($sample)** set of 12 asanas based on level  
 method: GET  
 input: 
+
 ```
 params: level
 ```
+
 output: 
+
 ```
 status: 200,
 body: [{
@@ -93,16 +107,21 @@ body: [{
 },
 ...]
 ```
+
 <br>
 
-<h4>**/api/randomNames/:id**</h4>
+<h4>/api/randomNames/:id</h4>
+
 description: find a set of 3 **random ($sample)** names different to the one from the id provided  
 method: GET  
 input: 
+
 ```
 params: id
 ```
-output: 
+
+output:
+
 ```
 status: 200,
 body: [ nameSanskrit: string, nameSanskrit: string, nameSanskrit: string ]

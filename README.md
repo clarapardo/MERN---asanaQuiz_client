@@ -9,29 +9,18 @@ As a new yoga teacher, I'm finding it difficult to learn all the poses (more tha
 
 There are 3 different levels of difficulty. On each try, you'll be tested on twelve different asanas. When an answer is failed, it is stored so you can review and replay all the failed ones at some other time.
 <br>
-<br>
 
 <div style="display: flex; justify-content: center; align-items: center">
-    <img src="/public/5.png"
-    alt="this.project.home"
-    style="width: 23%; margin-right: 5px"/>
-
-    <img src="/public/7.png"
-        alt="this.project.question"
-        style="width: 23%; margin-right: 5px"/>
-
-    <img src="/public/6.png"
-        alt="this.project.question"
-        style="width: 23%; margin-right: 5px"/>
-
-    <img src="/public/3.png"
-        alt="this.project.home"
-        style="width: 23%; margin-top: 25px"/>
+    <img src="/public/5.png" alt="this.project.home" style="width: 23%; margin-right: 5px"/>
+    <img src="/public/7.png" alt="this.project.question" style="width: 23%; margin-right: 5px"/>
+    <img src="/public/6.png" alt="this.project.question" style="width: 23%; margin-right: 5px"/>
+    <img src="/public/3.png" alt="this.project.home" style="width: 23%; margin-top: 25px"/>
 </div>
 
 
 <br>
 <h2>TECH STACK</h2>
+
 The *frameworks*, *libraries*, and other tools used:
 
 | front-end | back-end | DB |
@@ -40,10 +29,11 @@ The *frameworks*, *libraries*, and other tools used:
 | `Material UI` |  | `Mongoose (ODM)` |
 
 
-<h4>Back-end endpoints and expected data</h4>
-**/api/addAsana**
-description: add a yoga posture to the collection
-method: POST
+<h3>Back-end endpoints and expected data</h3>
+
+<h4>**/api/addAsana**</h4>
+description: add a yoga posture to the collection  
+method: POST  
 input: 
 ```
 body: {
@@ -60,9 +50,9 @@ body: {"created"}
 ```
 <br>
 
-**/api/searchAsana/:id**
-description: get a certain yoga pose based on id
-method: GET
+<h4>**/api/searchAsana/:id**</h4>
+description: get a certain yoga pose based on id  
+method: GET  
 input: 
 ```
 params:  id
@@ -82,9 +72,9 @@ body: {
 ```
 <br>
 
-**/api/randomSet/:level**
-description: generate a **random ($sample)** set of 12 asanas based on level
-method: GET
+<h4>**/api/randomSet/:level**</h4>
+description: generate a **random ($sample)** set of 12 asanas based on level  
+method: GET  
 input: 
 ```
 params: level
@@ -105,9 +95,9 @@ body: [{
 ```
 <br>
 
-**/api/randomNames/:id**
-description: find a set of 3 **random ($sample)** names different to the one from the id provided
-method: GET
+<h4>**/api/randomNames/:id**</h4>
+description: find a set of 3 **random ($sample)** names different to the one from the id provided  
+method: GET  
 input: 
 ```
 params: id

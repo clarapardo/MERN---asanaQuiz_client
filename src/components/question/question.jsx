@@ -3,6 +3,7 @@ import AnswerChip from '../answerChip/answerChip'
 import setService from '../../services/set.service'
 import { useEffect, useState } from 'react'
 import { Grid } from '@mui/material'
+import LoadingQuestion from '../loadingQuestion/loadingQuestion'
 
 
 const Question = ({ data, points }) => {
@@ -30,25 +31,27 @@ const Question = ({ data, points }) => {
     return (
 
         <div className="question">
-
-            <Grid container spacing={2}>
-                <Grid item xs={12} sm={4} justifyContent="center" container direction="column" alignItems="center">
-                    <img src={imageUrl} />
-                </Grid>
-                <Grid item xs={12} sm={8}>
-                    <h2>{nameEnglish === '-'
-                        ?
-                        'name this asana'
-                        :
-                        `${nameEnglish} - what's the name in sanskrit?`
-                    }</h2>
-                    <Grid container spacing={2}>
-                        {answers.map(elm => <Grid item xs={12} sm={6} md={12} key={elm}><AnswerChip key={elm} name={elm} correctAnswer={nameSanskrit} points={points} id={id} ></AnswerChip></Grid>)}
+            {nameEnglish === undefined
+                ?
+                <LoadingQuestion></LoadingQuestion>
+                :
+                <Grid container spacing={2}>
+                    <Grid item xs={12} sm={4} justifyContent="center" container direction="column" alignItems="center">
+                        <img src={imageUrl} />
+                    </Grid>
+                    <Grid item xs={12} sm={8}>
+                        <h2>{nameEnglish === '-'
+                            ?
+                            'name this asana'
+                            :
+                            `${nameEnglish} - what's the name in sanskrit?`
+                        }</h2>
+                        <Grid container spacing={2}>
+                            {answers.map(elm => <Grid item xs={12} sm={6} md={12} key={elm}><AnswerChip key={elm} name={elm} correctAnswer={nameSanskrit} points={points} id={id} ></AnswerChip></Grid>)}
+                        </Grid>
                     </Grid>
                 </Grid>
-
-            </Grid>
-
+            }
 
         </div>
     )
